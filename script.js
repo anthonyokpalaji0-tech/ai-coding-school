@@ -1,17 +1,17 @@
-function startCourse(){
-alert("Welcome to the AI Coding School! Your 3-month journey begins.");
-}
-
-function askAI(){
+function askAI() {
 
 let question = document.getElementById("question").value;
 
-let response = document.getElementById("response");
+let response = "AI Tutor: Great question! Try searching documentation or practicing this concept.";
 
-if(question === ""){
-response.innerHTML = "Please ask a question.";
-return;
+document.getElementById("response").innerText = response;
+
 }
 
-response.innerHTML = "AI Tutor: Great question! In the full version this will connect to an AI model to help with coding.";
+function runCode() {
+
+let code = document.getElementById("code").value;
+
+document.getElementById("output").srcdoc = code;
+
 }
