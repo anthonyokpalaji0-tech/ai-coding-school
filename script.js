@@ -1,17 +1,32 @@
-function askAI() {
+async function askAI() {
 
 let question = document.getElementById("question").value;
 
-let response = "AI Tutor: Great question! Try searching documentation or practicing this concept.";
+let responseBox = document.getElementById("response");
 
-document.getElementById("response").innerText = response;
+responseBox.innerText = "Thinking...";
 
-}
+const response = await fetch("https://api.openai.com/v1/chat/completions", {
 
-function runCode() {
+method: "POST",
 
-let code = document.getElementById("code").value;
+headers: {
+"Content-Type": "application/json",
+"Authorization": "Bearer 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"
+},
 
-document.getElementById("output").srcdoc = code;
+body: JSON.stringify({
+model: "gpt-4o-mini",
+messages: [
+{role: "system", content: "You are a helpful coding tutor for beginners."},
+{role: "user", content: question}
+]
+})
+
+});
+
+const data = await response.json();
+
+responseBox.innerText = data.choices[0].message.content;
 
 }
