@@ -1,7 +1,12 @@
-body{
-font-family:Arial, sans-serif;
+*{
 margin:0;
-background:#0f172a;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#020617);
 color:white;
 }
 
@@ -11,74 +16,100 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
-background:#020617;
+padding:20px 60px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
 }
 
 nav ul{
-list-style:none;
 display:flex;
-gap:20px;
+list-style:none;
+gap:30px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
 }
 
 /* HERO */
 
-header{
+.hero{
 text-align:center;
-padding:100px 20px;
-background:linear-gradient(135deg,#2563eb,#22c55e);
+padding:150px 20px;
 }
 
-header h1{
-font-size:50px;
+.hero h1{
+font-size:60px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+-webkit-background-clip:text;
+color:transparent;
 }
 
-header button{
+.hero p{
 margin-top:20px;
-padding:12px 25px;
+font-size:20px;
+opacity:0.8;
+}
+
+.start-btn{
+margin-top:30px;
+padding:15px 40px;
 border:none;
-background:white;
-color:black;
+border-radius:30px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+color:white;
+font-size:18px;
 cursor:pointer;
-font-size:16px;
+transition:0.3s;
+}
+
+.start-btn:hover{
+transform:scale(1.1);
 }
 
 /* COURSES */
 
-section{
-padding:60px 20px;
+#courses{
 text-align:center;
+padding:100px 20px;
 }
 
-.course-container{
+#courses h2{
+font-size:40px;
+margin-bottom:50px;
+}
+
+.courses{
 display:flex;
 justify-content:center;
-gap:30px;
 flex-wrap:wrap;
+gap:40px;
 }
 
-.course{
-background:#1e293b;
-padding:30px;
-border-radius:10px;
-width:250px;
-transition:0.3s;
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:20px;
+width:260px;
+transition:0.4s;
 }
 
-.course:hover{
-transform:scale(1.05);
-background:#334155;
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.1);
 }
-
-/* FOOTER */
 
 footer{
 text-align:center;
-padding:20px;
-background:#020617;
+padding:30px;
+opacity:0.7;
 }
