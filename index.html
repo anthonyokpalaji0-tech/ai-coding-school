@@ -1,58 +1,79 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI Coding School</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
-<h1>AI Coding School</h1>
-<p>Learn Web Development in 3 Months with an AI Tutor</p>
-<button onclick="startCourse()">Start Learning</button>
+<h1>🚀 AI Coding School</h1>
+<p>Learn Web Development with an AI Tutor</p>
+<a href="#courses"><button>Start Learning</button></a>
 </header>
 
-<section class="course">
-<h2>3 Month AI Coding Program</h2>
+<section id="courses">
 
-<div class="module">
-<h3>Month 1 – HTML Foundations</h3>
-<p>Learn how websites are structured and build your first webpage.</p>
+<h2>Courses</h2>
+
+<div class="course">
+<h3>HTML Basics</h3>
+<p>Learn how to build websites from scratch.</p>
 </div>
 
-<div class="module">
-<h3>Month 2 – CSS Design</h3>
+<div class="course">
+<h3>CSS Design</h3>
 <p>Make your websites beautiful and responsive.</p>
 </div>
 
-<div class="module">
-<h3>Month 3 – JavaScript</h3>
-<p>Create interactive websites and real web projects.</p>
+<div class="course">
+<h3>JavaScript</h3>
+<p>Add interactivity and build real web apps.</p>
 </div>
 
 </section>
 
-<section class="ai-tutor">
+<section>
 
-<h2>Ask the AI Tutor</h2>
+<h2>🤖 AI Coding Tutor</h2>
 
-<textarea id="question" placeholder="Ask a coding question..."></textarea>
+<p>Ask the AI any coding question.</p>
+
+<input id="question" placeholder="Ask a coding question...">
 
 <button onclick="askAI()">Ask AI</button>
 
-<div id="response"></div>
+<p id="response"></p>
+
+</section>
+
+<section>
+
+<h2>💻 Coding Playground</h2>
+
+<textarea id="code" placeholder="Write HTML here..."></textarea>
+
+<button onclick="runCode()">Run Code</button>
+
+<iframe id="output"></iframe>
 
 </section>
 
 <footer>
-<p>AI Coding School © 2026</p>
+
+<p>Built by Anthony 🚀</p>
+
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
