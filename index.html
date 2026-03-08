@@ -13,8 +13,8 @@
 
 </head>
 
-<body> <div id="particles-js"></div>
-
+<body> 
+<div id="particles-js"></div>
 <nav>
 
 <h2 class="logo">AI Coding School</h2>
@@ -73,7 +73,35 @@
 <p>© 2026 AI Coding School | Built by Anthony 🚀</p>
 
 </footer>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
+<script>
+
+particlesJS("particles-js", {
+
+particles: {
+number: { value: 80 },
+size: { value: 3 },
+move: { speed: 2 },
+line_linked: {
+enable: true,
+distance: 150,
+color: "#38bdf8",
+opacity: 0.4,
+width: 1
+}
+},
+
+interactivity: {
+events: {
+onhover: { enable: true, mode: "repulse" }
+}
+}
+
+});
+
+</script>
 </body>
 </html>
+
 
