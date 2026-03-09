@@ -28,3 +28,22 @@ chat.innerHTML += "<p><b>AI:</b> " + reply + "</p>";
 input.value = "";
 
 }
+
+
+
+
+function runCode(){
+
+let html = document.getElementById("html-code").value;
+let css = document.getElementById("css-code").value;
+let js = document.getElementById("js-code").value;
+
+let output = document.getElementById("output");
+
+output.srcdoc = `
+<style>${css}</style>
+${html}
+<script>${js}<\/script>
+`;
+
+}
