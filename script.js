@@ -1,32 +1,30 @@
-async function askAI() {
+function sendMessage() {
 
-let question = document.getElementById("question").value;
+let input = document.getElementById("user-input");
+let message = input.value;
 
-let responseBox = document.getElementById("response");
+if(message === "") return;
 
-responseBox.innerText = "Thinking...";
+let chat = document.getElementById("chat-messages");
 
-const response = await fetch("https://api.openai.com/v1/chat/completions", {
+chat.innerHTML += "<p><b>You:</b> " + message + "</p>";
 
-method: "POST",
+let reply = "I'm your AI coding tutor! Ask me about HTML, CSS, or JavaScript.";
 
-headers: {
-"Content-Type": "application/json",
-"Authorization": "Bearer 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"
-},
+if(message.toLowerCase().includes("html")){
+reply = "HTML structures websites using tags like <div>, <h1>, and <p>.";
+}
 
-body: JSON.stringify({
-model: "gpt-4o-mini",
-messages: [
-{role: "system", content: "You are a helpful coding tutor for beginners."},
-{role: "user", content: question}
-]
-})
+if(message.toLowerCase().includes("css")){
+reply = "CSS controls styles like colors, layouts, and animations.";
+}
 
-});
+if(message.toLowerCase().includes("javascript")){
+reply = "JavaScript adds interactivity like buttons, animations, and dynamic content.";
+}
 
-const data = await response.json();
+chat.innerHTML += "<p><b>AI:</b> " + reply + "</p>";
 
-responseBox.innerText = data.choices[0].message.content;
+input.value = "";
 
 }
